@@ -2,12 +2,14 @@ package ch02_ex3.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 import ch02_ex3.entity.Parrot;
 
 @Configuration
 public class ProjectConfig {
 	@Bean("루키")
+	@Primary
 	Parrot parrot1() {
 		var p = new Parrot();
 		p.setName("루키");
