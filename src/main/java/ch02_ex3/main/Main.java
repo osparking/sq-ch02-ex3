@@ -14,7 +14,7 @@ public class Main {
 	public static void main(String[] args) {
 		var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 		var ps = new PrintStream(System.out, true, UTF_8);
-		var p = (Parrot) context.getBean("parrot1");
+		var p = (Parrot) context.getBean("parrot2", Parrot.class);
 		
 		ps.println(p.getName());
 	}
